@@ -1,0 +1,169 @@
+H1 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+body {
+    overflow:hidden;
+    position: relative;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+    background-color: #484848;
+}
+html {
+  background-color: #484848;
+}
+.icone{
+position: absolute;
+top: 150px;
+left: 500px;
+z-index: 10000;
+}
+#rectangle {
+  background: #000000;
+  padding: 20px;
+  width: 650px;
+  height: 340px;
+  position: absolute;
+  top: 70px;
+  left: 270px;
+  z-index: 10000;
+}
+#rcorners1 {
+  border-radius: 25px;
+  background: #808080;
+  padding: 20px;
+  width: 1600px;
+  height: 130px;
+  box-shadow: 5px 10px 5px;
+  position: relative;
+  top: 5px;
+}
+#rcorners2 {
+  border-radius: 25px;
+  background: #808080;
+  padding: 20px;
+  width: 130px;
+  height: 500px;
+  box-shadow: 5px 10px 5px;
+  position: relative;
+  left: -717px;
+}
+#rcorners3 {
+  border-radius: 25px;
+  background: #808080;
+  padding: 20px;
+  width: 1200px;
+  height: 680px;
+  box-shadow: 5px 10px 5px;
+  position: relative;
+  top: -543px;
+  overflow: hidden;
+}
+#rcorners4 {
+  border-radius: 25px;
+  background: #808080;
+  padding: 20px;
+  width: 130px;
+  height: 500px;
+  box-shadow: 5px 10px 5px;
+  position: relative;
+  right : -717px;
+  top: -1260px;
+}
+.left {
+  position: absolute;
+  left: 10px;
+}
+.bottomright {
+  position: absolute;
+  bottom: -20px;
+  right: 16px;
+}
+.bottomrealright {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.top {
+  position: absolute;
+  top : 0%;
+  left : 20%;
+}
+.second {
+  position: absolute;
+  top : 20%;
+  left : 20%;
+}
+.center {
+position: absolute;
+top: 40%;
+left: 47%;
+transform: translate(-50%, -50%);
+font-weight: bold;
+font-family: "Times New Roman", Times, serif;
+font-size: 50px;
+margin: 60px;
+}
+.third {
+  position: absolute;
+  top : 40%;
+  left : 20%;
+  text-align:center;
+}
+.third .img {
+  margin:6px 0 10px 0;
+}
+.borderdeg{
+  border: 5px solid red;
+}
+.fourth {
+  position: absolute;
+  top : 60%;
+  left : 20%;
+}
+.fith {
+  position: absolute;
+  top : 80%;
+  left : 20%;
+}
+.towel {
+  position: absolute;
+  top : 20%;
+  left : 1%;
+}
+.form-popup {
+  position: fixed;
+  bottom: 100px;
+  left: 150px;
+  z-index: 9;
+}
+.hid-form-popup {
+  position: fixed;
+  display: none;
+  bottom: 100px;
+  left: 150px;
+  z-index: 9;
+}
+.form-container {
+  width: 520px;
+  height: 130px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #66ff99;
+  box-shadow: 5px 10px 5px;
+}
+.form-container input[type=text]{
+  border: none;
+  width: 85%;
+}
+.form-container .btn {
+  cursor: pointer;
+}
