@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <style>
+        #ball{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: red;
+            transition: .2s;
+
+        }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    </head>
+    <body>
+        <div id="ball" ></div>
+        <script>
+            var color = "red";
+            $(document).ready(function(){
+                $("#ball").mouseleave(function(){
+                var $height = $('#ball').css("height").substr(0, 3);
+                if ($height >= 205)
+                {
+                    var $newHeight = $height -5;
+                    $("#ball").css("height", $newHeight);
+                    var $width = $("#ball").css("width").substr(0, 3);
+                    var $newWidth= $width -5;
+                    $("#ball").css("width", $newWidth);
+                }
+                if (color == "red")
+                    color = "blue";
+                else if (color == "green")
+                    color = "red";
+                else if (color == "blue")
+                    color = "green";
+                $("#ball").css("background-color", color);
+            });
+        });
+             $(document).ready(function(){
+                $("#ball").click(function(){
+                var height = parseInt($('#ball').css("height").substr(0, 3));
+                var newHeight = height + 10;
+                if (newHeight > 420)
+                {
+                    newHeight = 200;
+                    newWidth = 200;
+                    $("#ball").css("height", newHeight);
+                    $("#ball").css("width", newWidth);
+                    return;
+                }
+                $("#ball").css("height", newHeight);
+                var width = parseInt($("#ball").css("width").substr(0, 3));
+                var newWidth= width + 10;
+                $("#ball").css("width", newWidth);
+                if (color == "red")
+                {
+                    color = "green";
+                }
+                else if (color == "green")
+                    color = "blue";
+                else if (color == "blue")
+                    color = "red";
+                $("#ball").css("background-color", color);
+            });
+            });       
+        </script>
+    </body>
+</html>

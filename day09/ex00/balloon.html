@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <style>
+        #ball{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: red;
+
+        }
+        </style>
+    </head>
+    <body>
+        <div id="ball" onclick="increase()" onmouseleave="decrease()"></div>
+        <script>
+            var color = "red";
+            function decrease(){
+                var el = document.getElementById("ball");
+                var height = el.offsetHeight;
+                if (height >= 205)
+                {
+                    var newHeight = height -5 ;
+                    el.style.height = newHeight + 'px';
+                    var width = el.offsetWidth;
+                    var newWidth= width -5;
+                    el.style.width = newWidth + 'px';
+                }
+                if (color == "red")
+                    color = "blue";
+                else if (color == "green")
+                    color = "red";
+                else if (color == "blue")
+                    color = "green";
+                el.style.backgroundColor = color;
+            }
+            function increase(){
+                var el = document.getElementById("ball");
+                var height = el.offsetHeight;
+                var newHeight = height + 10;
+                if (newHeight > 420)
+                {
+                    newHeight = 200;
+                    newWidth = 200;
+                    el.style.height = newHeight + 'px';
+                    el.style.width = newWidth + 'px';
+                    return;
+                }
+                el.style.height = newHeight + 'px';
+                var width = el.offsetWidth;
+                var newWidth= width + 10;
+                el.style.width = newWidth + 'px';
+                if (color == "red")
+                {
+                    color = "green";
+                }
+                else if (color == "green")
+                    color = "blue";
+                else if (color == "blue")
+                    color = "red";
+                el.style.backgroundColor = color;
+            }          
+        </script>
+
+    </body>
+</html>

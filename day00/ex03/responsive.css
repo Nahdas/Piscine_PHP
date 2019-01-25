@@ -1,0 +1,101 @@
+p.legend{
+font-size: 1.2vw;
+font-weight: bold;
+text-align: right;
+vertical-align: middle;
+}
+p.mass
+{
+font-size: 0.8vw;
+text-align:right;
+vertical-align: top;
+}
+p.element
+{
+font-size: 2vw;
+font-weight: bold;
+display: block;
+text-align: center;
+vertical-align: middle;
+}
+p.info{
+font-size: 1vw;
+font-weight: bold;
+text-align: center;
+vertical-align: middle;
+}
+p.number
+{
+text-align:left;
+vertical-align: bottom;
+font-size: 1vw;
+}
+.seperate
+{
+border: 3px solid black;
+border-color: white;
+}
+table .empty
+{
+border:0;
+}
+td {
+border: 1px solid black;
+overflow: hidden;
+text-overflow: ellipsis;
+border-color: white;
+}
+table .legend{
+width: 15vw;
+border:0;
+
+}
+tr {
+line-height: 0.2px;
+}
+table {
+table-layout: fixed;
+width: 90%;
+white-space: nowrap
+}
+H1 {
+color : white;
+font-size: 5vw;
+}
+body {
+background-color : #1A86CB;
+color : white;
+}
+.kaki{
+background-color: #669900;
+}
+.salmon{
+background-color: #ff6633;
+}
+.rose{
+background-color: #ffb399;
+}
+.blue{
+background-color: #003cb3;
+}
+.orange{
+background-color: #F59B00;
+}
+.light{
+background-color: #80bdff;
+}
+.green{
+background-color: #00e6ac;
+}
+.grey{
+background-color: #666699;
+}
+.bouteille{
+background-color: #b366ff;
+}
+.fuschia{
+background-color: #cc0066;
+}
+.bordeaux{
+background-color: #80002a;
+}

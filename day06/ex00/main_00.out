@@ -1,0 +1,69 @@
+
+<- Color ----------------------------------------------------------------------
+The Color class handles RGB colors.
+
+An instance can be contructed from either a RGB value:
+new Color( array( 'rgb' => 12345 ) );
+
+Or from distinct red, green, blue constitutives:
+new Color( array( 'red' => 255, 'green' => 255, 'blue' => 255 ) );
+
+Red, green, blue constitutives and RGB values are converted to intergers.
+Negative or > to 255 color constitutives are left as is.
+Any other use is undefined behaviour.
+
+The class provides the following methods :
+
+Color   add( Color $rhs );
+Adds each color constitutive and returns a new Color instance.
+
+Color   sub( Color $rhs );
+Substracts each color constitutive and returns a new Color instance.
+
+Color   mult( $f );
+Multiplies each color constitutive by factor $f and returns a new Color
+instance.
+---------------------------------------------------------------------- Color ->
+1 new  Color( red: 255, green:   0, blue:   0 ) constructed.
+2 new  Color( red:   0, green: 255, blue:   0 ) constructed.
+3 new  Color( red:   0, green:   0, blue: 255 ) constructed.
+
+4 red-> add green Color( red: 255, green: 255, blue:   0 ) constructed.
+5 green-> add blue Color( red:   0, green: 255, blue: 255 ) constructed.
+6 blur->add red Color( red: 255, green:   0, blue: 255 ) constructed.
+
+7 white : red add green  Color( red: 255, green: 255, blue:   0 ) constructed.
+8             add blue   Color( red: 255, green: 255, blue: 255 ) constructed.
+9            Color( red: 255, green: 255, blue:   0 ) destructed.
+
+10 print red Color( red: 255, green:   0, blue:   0 )
+11 print green Color( red:   0, green: 255, blue:   0 )
+12 print blue Color( red:   0, green:   0, blue: 255 )
+13 print yellow Color( red: 255, green: 255, blue:   0 )
+14 print cyan Color( red:   0, green: 255, blue: 255 )
+15 print magenta Color( red: 255, green:   0, blue: 255 )
+16 print white Color( red: 255, green: 255, blue: 255 )
+
+
+17 print Black: Color( red:   0, green:   0, blue:   0 )
+
+
+18 darkgrey new  Color( red:  10, green:  10, blue:  10 ) constructed.
+19 print         darkgrey: Color( red:  10, green:  10, blue:  10 )
+20 light gret    Color( red: 225, green: 225, blue: 225 ) constructed.
+21 print              lightgrey: Color( red: 225, green: 225, blue: 225 )
+22 random        Color( red:  12, green:  31, blue:  23 ) constructed.
+23 print]        random: Color( red:  12, green:  31, blue:  23 )
+
+
+24 Color( red:  12, green:  31, blue:  23 ) destructed. (grey)
+25 Color( red: 225, green: 225, blue: 225 ) destructed. (lighr grey)
+26 Color( red:  10, green:  10, blue:  10 ) destructed. (drak grey)
+27 Color( red:   0, green:   0, blue:   0 ) destructed.
+28 Color( red: 255, green: 255, blue: 255 ) destructed.
+29 Color( red: 255, green:   0, blue: 255 ) destructed.
+30 Color( red:   0, green: 255, blue: 255 ) destructed.
+31 Color( red: 255, green: 255, blue:   0 ) destructed.
+32 Color( red:   0, green:   0, blue: 255 ) destructed.
+33 Color( red:   0, green: 255, blue:   0 ) destructed.
+34Color( red: 255, green:   0, blue:   0 ) destructed.

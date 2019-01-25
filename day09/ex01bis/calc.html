@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    </head>
+    <body>
+        <div>
+            <form name="MyForm" method="POST">
+                <input type="text" name="nominateur" id ="nom">
+                <select name="operateur" id="op">
+                    <option value = "*"> * </option>
+                    <option value = "+"> + </option>
+                    <option value = "-"> - </option>
+                    <option value = "/"> / </option>
+                    <option value = "%"> %</option>
+                </select>
+                <input type="text" name="denominateur" id="den">
+                <input type="submit" value="Try me !" id="sub">   
+            </form>
+        </div>
+        <script>
+        $(document).ready(function(){
+        $("#sub").on("click",
+        function (event){
+            event.preventDefault();
+            var nom = parseInt($("#nom").val());
+            var op = $("#op").val();
+            var den = parseInt($("#den").val());
+            var sub = $("#sub").val();
+
+            if (!Number.isInteger(nom) || !Number.isInteger(den) || nom < 0 || den < 0)
+                alert("Error :(");
+            else
+            {
+                if (op == "*")
+                    res = nom * den;
+                if (op == "+")
+                    res = nom + den;
+                if (op == "-")
+                    res = nom - den;
+                if (op == "/")
+                {
+                    if (den == 0)
+                    {
+                        console.log("It's over 9000!");
+                        alert("It's over 9000!");
+                        return;
+                    }
+                    res = nom / den;
+                }
+                if (op == "%")
+                {
+                    if (den == 0)
+                    {
+                        console.log("It's over 9000!");
+                        alert("It's over 9000!");
+                        return;
+                    }
+                    res = nom % den;
+                }
+                console.log(res);
+                alert(String(res));     
+            }
+         
+        });
+        });
+        setInterval(function (){
+            alert("Please, use me ...");
+        }, 30000);
+        </script>
+    </body>
+
+</html>
